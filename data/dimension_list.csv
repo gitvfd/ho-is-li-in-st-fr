@@ -1,0 +1,12 @@
+rank,code,Dimension
+1,IW,Revenu et patrimoine
+2,JE,Emplois et salaires
+3,HO,Logement
+4,HS,État de santé
+5,WL,Équilibre vie professionnelle-vie privée
+6,ES,Éducation et compétences
+7,SC,Liens sociaux
+8,CG,Engagement civique et gouvernance
+9,EQ,Qualité de l’environnement
+10,PS,Sécurité personnelle
+11,SW,Satisfaction à l’égard de l’existence

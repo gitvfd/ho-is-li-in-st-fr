@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<link  rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="page">
+	<div class="heading1">Tous les pays de l’OCDE sont-ils égaux devant les inégalités ?</div>
+	<!--<div class="heading1Sub">Inégalités de bien-être</div>-->
+	<div class="intro_text">Découvrez les caractéristiques de la répartition du bien-être, dans les pays de l’OCDE, entre les individus, selon leur situation, leur âge, leur sexe, leur niveau d’études et leur origine (personnes issues de l’immigration ou autochtones).</div>
+
+
+	<input id="toggle" type="checkbox" >
+  	<label id="hideShowToggle" for="toggle">Afficher plus...</label>
+	<div id="expand" >
+    <section>Le débat sur les inégalités est, depuis toujours, centré essentiellement sur les ressources économiques, et pour cause : dans les pays de l’OCDE, le revenu moyen disponible des 20 % les plus riches est généralement 5.4 fois plus élevé que celui des 20 % les plus pauvres. Les 10 % de ménages les plus aisés détiennent quant à eux plus de la moitié de la richesse moyenne des pays. Pour autant, des lignes de faille existent dans bien d’autres domaines de la vie des individus. Saviez-vous, par exemple, que les jeunes sont confrontés à un risque de chômage plus de deux fois supérieur à celui des adultes de plus de 25 ans ? Et que les hommes ayant uniquement bénéficié d’un enseignement primaire vivent en moyenne près de huit ans de moins que ceux qui ont étudié à l’université ? Pour en savoir plus sur les données et les travaux de l’OCDE sur le bien-être, cliquez sur le logo de l’Organisation ou rendez-vous sur <a href="oe.cd/2er" target="_blank">Comment va la vie ?</a>.
+    </section>
+	</div>
+	<br/>
+	<div id="country_sel">
+		<div class="dropdown_text">Sélectionnez un pays : </div>
+		<select id="country_dropdown" onchange="displayIneq(this.value)";>
+            <option value="DEU" >Allemagne</option>
+            <option value="AUS">Australie</option>
+            <option value="AUT" >Autriche</option>
+            <option value="BEL" >Belgique</option>
+            <option value="CAN" >Canada</option>
+            <option value="CHL" >Chili</option>
+            <option value="KOR" >Corée</option>
+            <option value="DNK" >Danemark</option>
+            <option value="ESP" >Espagne</option>
+            <option value="EST" >Estonie</option>
+            <option value="USA" >États-Unis</option>
+            <option value="FIN" >Finlande</option>
+            <option value="FRA" >France</option>
+            <option value="GRC" >Grèce</option>
+            <option value="HUN" >Hongrie</option>
+            <option value="IRL" >Irlande</option>
+            <option value="ISL" >Islande</option>
+            <option value="ISR" >Israël</option>
+            <option value="ITA" >Italie</option>
+            <option value="JPN" >Japon</option>
+            <option value="LVA" >Lettonie</optionion>
+            <option value="LUX" >Luxembourg</option>
+            <option value="MEX" >Mexique</option>
+            <option value= "NOR">Norvège</option>
+            <option value="NZL" >Nouvelle-Zélande</option>
+            <option value= "OECD" selected="selected">OCDE</option>
+            <option value="NLD" >Pays-Bas</option>
+            <option value="POL" >Pologne</option>
+            <option value="PRT" >Portugal</option>
+            <option value="SVK" >République slovaque</option>
+            <option value="CZE" >République tchèque</option>
+            <option value="SVN" >Slovénie</option>
+            <option value="SWE" >Suède</option>
+            <option value="CHE" >Suisse</option>
+            <option value="GBR" >Royaume-Uni</option>
+            <option value="TUR" >Turquie</option>
+
+		</select>
+	</div>
+	<div id="indic_sel">
+		<div class="dropdown_text" >Sélectionnez un indicateur :</div>
+		<select id="indic_dropdown" onchange="displayIneq(this.value)";>
+            <option value="ES_ADCO"  selected="selected">Compétences des adultes</option>
+            <option value="EQ_AIRP" >Pollution de l’air</option>
+            <option value="ES_STCS" >Compétences cognitives des élèves de 15 ans</option>
+            <option value="JE_PE" >Salaire</option>
+            <option value="ES_EDUA" >Niveau d’études</option>
+            <option value="JE_EMPL" >Taux d’emploi</option>
+            <option value="WL_EWLH" >Salariés ayant une durée de travail très longue</option>
+            <option value="PS_SFRV" >Sentiment de sécurité des personnes lorsqu’elles marchent seules la nuit</option>
+            <option value="PS_HOMI" >Taux d’homicides</option>
+            <option value="IW_HNFW" >Patrimoine net des ménages</option>
+            <option value="HO_EXP" >Dépenses de logement</option>
+            <option value="HS_LEB" >Espérance de vie à la naissance</option>
+            <option value="SW_LIFS" >Satisfaction à l’égard de l’existence</option>
+            <option value="JE_LP" >Bas salaires</option>
+            <option value="IW_HADI">Revenu disponible ajusté net des ménages</option>
+            <option value="HO_NUMR" >Logements surpeuplés</option>
+            <option value="HS_SFRH" >État de santé perçu</option>
+            <option value="CG_SAYG" >Efficacité politique</option>
+            <option value="SC_SNTWS" >Soutien du réseau social</option>
+            <option value="WL_LEPC" >Temps consacré aux loisirs et aux occupations personnelles</option>
+            <option value="JE_LTUR" >Taux de chômage</option>
+            <option value="CG_VOTO" >Taux de participation électorale</option>
+            <option value="EQ_SATW" >Qualité de l’eau</option>
+		<select>
+	</div>
+
+	<br/>
+	<div id="toolbar">
+		<div class="button active" id="comparison">Comparaison entre pays</div>
+		<div class="button " id="heatmap">Inégalités au sein d’un pays </div>
+	</div>
+</div>
+	<!-- ***********************
+	    MAP
+ 	***********************-->
+
+	<!--<div id="mapVisualisation"></div>
+	<br/>-->
+	<!-- ***********************
+	    COUNTRY DETAIL
+ 	***********************-->
+ 	<div id="countryDetail">
+		<!-- ***********************
+		    INEQUALITY CARD
+	 	***********************-->
+	 	<div id="inequalityCard">
+			<!--<div class="explanations">Sélectionnez un pays et un indicateur de bien-être pour visualiser les résultats moyens qu’il obtient par rapport aux autres pays de l’OCDE.</div>-->
+			<div> <span class="pickedCountry"></span><span > - </span><span class="indicatorTitle" id="pickedindicator"></span><span > &nbsp; </span><span  id="typeInd"></span></div> 
+
+			<br/>
+			<div id="ineqCard">
+				<div id="distriIndicViz"></div>
+				<br/>
+				<div class="explanations">Découvrez dans quelle mesure les résultats obtenus au titre de l’indicateur choisi varient au sein de la société entre les individus, selon leur situation, leur âge, leur sexe, leur niveau d’études et leur origine (personnes issues de l’immigration ou autochtones).</div>
+
+
+				<div id="ineqIndic_v1"></div>
+			</div>
+		</div>
+ 		<!-- ***********************
+	    End INEQUALITY CARD
+ 		***********************-->
+
+		<!-- ***********************
+			HEATMAP
+		***********************-->
+
+	 	<div id="countryCard">
+			<div class="explanations">De fortes inégalités de revenus vont-elles de pair avec des inégalités marquées en termes d’éducation ou d’engagement civique ? Certains groupes de population présentent-ils davantage de risques de cumuler plusieurs handicaps ? <br/><br/>•	Le schéma ci-dessous donne un aperçu de différents types d’inégalités au regard des 11 dimensions du bien-être examinées dans <a href="http://oe.cd/2er" target="_blank">Comment va la vie ?</a>.<br/></div>
+			<div><span class="pickedCountry"></span><span > - </span><span class="indicatorTitle"  >Inégalités au regard des indicateurs du bien-être</span></div>
+			<br/>
+			<div id="heatMapVisualisation"></div>
+		</div>
+
+
+ 	</div>
+ 	<div class="button btn_share" id="shareLink">
+		<object type="image/svg+xml" height="14" width="15" data="img/share_neu.svg">
+    	</object class="text_btn"> Partager 
+	</div>
+ 	<div class="button btn_share" id="downloadLink">
+		<object type="image/svg+xml" height="14" width="15" data="img/download.svg">
+    	</object class="text_btn"> Télécharger 
+	</div>
+ 	<div class="button btn_share" id="helpLink">
+		<object type="image/svg+xml" height="14" width="15" data="img/help.svg">
+    	</object class="text_btn"> Aide 
+	</div>
+	<div class="siteFooterBar">
+        <a href="http://www.oecd.org" target="_blank"><img  src="img/SYMBOL_20cm.png" ></img></a>
+        <!--<div >2017 © OECD</div>-->
+	</div>
+
+	<script src="js/embed.js"></script>
+<!-- ***********************
+	    TOOLTIPS 
+ ***********************-->
+	<div id="avgIndicTooltip" class="hidden">
+		<b><span id="countryName">country</span></b><br/><i><span id="indicatorName">indicator</span></i><br/><span id="indicatorValue">value</span><br/><i><span id="indicatorMeasure">measure</span></i>
+	</div>
+
+
+	<div id="tooltipVarIcons" class="hidden">
+		<b><span id="heatIndicatorName">Name</span></b><br/><span id="heatIndicatorDef">Definition</span><br/>
+	</div>
+	<div id="tooltipIneqIcons" class="hidden">
+		<b><span id="inequalityType">inequality type</span></b><br/><span id="inequalityDef">Definition</span><br/><span id="inequalityMessage"></span>
+	</div>
+	<div id="tooltipHeatValue" class="hidden">
+		<b><span id="heatIneqType">Type</span></b><br/><span id="heatIndName">indicator</span><br/><span id="heatValue">value</span><br/>
+	</div>
+
+	<!--<div id="tooltipScaleExplanation" class="hidden">
+		<b>This is the text</b> STD gave me!<br/> It is <i>clear</i> and concise.
+	</div>-->
+		<br/>
+		<br/>
+		<br/>
+<script src="libs/d3.v4.min.js"></script>
+<script src="libs/d3-scale-chromatic.v1.min.js"></script>
+<script src="js/unique.js"></script>
+<script src="js/setupbutton.js"></script>
+<script src="js/displayIneq.js"></script>
+<script src="js/normalize.js"></script>
+<script src="js/distriIndicViz.js"></script>
+<script src="js/IneqIndic.js"></script>
+<script src="js/Heatmap.js"></script>
+<script type="text/javascript">
+
+/** SET main variables for the visualisation**/
+	//var widthMap=document.getElementById('mapVisualisation').offsetWidth;
+	var width=document.getElementById('inequalityCard').offsetWidth;
+	//var heightMap=500;
+	var marginRight=5/100*width;
+	var marginLeft=5/100*width;
+	var marginTop=5/100*width;
+	var marginBottom=5/100*width;
+
+
+/** LOAD ALL DATA **/
+
+
+	var relationshipList=[];
+	d3.tsv("data/relationship.tsv",function(error, data) {
+		data.forEach(function(d){
+				relationshipList.push(d)
+			})
+
+	})
+
+	var indicatorList=[];
+	d3.tsv("data/indicator_list.tsv",function(error, data) {
+		data.forEach(function(d){
+				indicatorList.push(d)
+			})
+
+	})
+
+	var dimensionList=[];
+	d3.csv("data/dimension_list.csv",function(error, data) {
+		data.forEach(function(d){
+				dimensionList.push(d)
+			})
+
+	})
+
+	var inequalityList=[];
+	d3.csv("data/inequality.csv",function(error, data) {
+		data.forEach(function(d){
+				inequalityList.push(d)
+			})
+
+	})
+
+	var correspondanceISO=[];
+	d3.csv("data/codeIso.csv",function(error, data) {
+		data.forEach(function(d){
+				correspondanceISO.push(d)
+			})
+
+	})
+	
+	var datatot=[];
+	var counter=0; // define counter to launch function at the end of the forEach
+	d3.tsv("data/tot_data.tsv",function(error, data) {
+		data.forEach(function(d){
+				datatot.push(d);
+				counter++; 
+         		if (counter === data.length) {
+             		normalize();
+         		}
+			})
+
+	})
+
+
+	var distriData; // placeholder for distribution viz
+/**Rounding principle**/
+	var f = d3.format(".1f");
+
+
+/** Define Color Scale **/
+	var colorScale = d3.scaleOrdinal()
+		.domain(["Housing","Jobs and earnings","Income and wealth","Social connections","Education and skills","Environmental quality","Civic engagement and governance","Health status","Life Satisfaction","Personal security","Work-Life Balance"])
+		.range(["#3DA594","#237FBD","#2CA3E0","#CE485D","#7EA943","#30A457","#DCA922","#7C3A73","#E26237","#606060","#962828"]);
+
+/** Define Circle Scale **/
+	var scale = d3.scaleSqrt()
+
+/** Create SVG DISTRIBUTION INDICATOR**/
+    	var distributionIndic = d3.select("#distriIndicViz").append("svg")
+
+
+
+/** Create SVG INEQUALITY CARD **/
+		
+    	var ineqIndic = d3.select("#ineqIndic_v1").append("svg")
+
+
+/** Create SVG HEATMAP**/
+    	var heatmap = d3.select("#heatMapVisualisation").append("svg")
+
+
+//INITIALIZE BUTTONS
+
+setupButtons();
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51983915-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>

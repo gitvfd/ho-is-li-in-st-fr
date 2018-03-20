@@ -1,0 +1,24 @@
+code	cat	Dimension	Indicator	Measure	Scale	Display
+IW_HADI	average	Revenu et patrimoine	Revenu disponible ajusté net des ménages	USD aux PPA courantes	Pos 	(niveaux moyens)
+IW_HNFW	average	Revenu et patrimoine	Patrimoine net des ménages	Valeur moyenne totale des actifs nets des passifs	Pos	(niveaux moyens)
+JE_EMPL	average	Emplois et salaires	Taux d’emploi	Salariés de 15 à 64 ans, en pourcentage de la population du même âge	Pos	
+JE_PE	average	Emplois et salaires	Salaire 	Salaire annuel brut moyen par salarié à temps plein	Pos	(niveaux moyens)
+JE_LTUR	average	Emplois et salaires	Taux de chômage	Pourcentage de la population active au chômage	Neg	
+JE_LP	average	Emplois et salaires	Bas salaires	Part des travailleurs à temps plein dont le salaire est inférieur aux deux tiers du salaire médian brut de l'ensemble des travailleurs à temps plein	Neg	(incidence)
+HO_NUMR	average	Logement 	Logements surpeuplés	Pourcentage de ménages vivant dans des logements surpeuplés (moins d'une pièce par personne, hors salles de bains)	Neg	(incidence)
+HO_EXP	average	Logement 	Dépenses de logement	Pourcentage de ménages consacrant plus de 40 % de leur revenu au logement et à son entretien	Neg	(incidence)
+WL_EWLH	average	Équilibre vie professionnelle-vie privée	Salariés ayant une durée de travail très longue	Pourcentage de salariés travaillant habituellement 50 heures par semaine ou plus	Neg	(incidence)
+WL_LEPC	average	Équilibre vie professionnelle-vie privée	Temps consacré aux loisirs et aux occupations personnelles	Heures par jour	Pos	(niveaux moyens)
+HS_LEB	average	État de santé	Espérance de vie à la naissance	Nombre d’années pendant lesquelles un nouveau-né peut espérer vivre	Pos	(niveaux moyens)
+HS_SFRH	average	État de santé	État de santé perçu	Auto-évaluation de l'état de santé	Pos	(niveaux moyens)
+ES_EDUA	average	Éducation et compétences	Niveau d’études	Pourcentage d’adultes de 25 à 64 ans titulaires d’un diplôme du deuxième cycle du secondaire au minimum	Pos	(niveaux moyens)
+ES_ADCO	average	Éducation et compétences	Compétences des adultes	Moyenne des scores moyens en littératie et en numératie (PIAAC)	Pos	(niveaux moyens)
+ES_STCS	average	Éducation et compétences	Compétences cognitives des élèves de 15 ans	Moyenne des scores moyens aux tests de sciences, de lecture et de mathématiques (PISA)	Pos	(niveaux moyens)
+SC_SNTWS	average	Liens sociaux	Soutien du réseau social	Personnes considérant avoir des amis ou des proches sur qui compter en période difficile	Pos	(niveaux moyens)
+CG_SAYG	average	Engagement civique et gouvernance	Efficacité politique	Personnes estimant avoir voix au chapitre quant à l’action publique	Pos	(niveaux moyens)
+CG_VOTO	average	Engagement civique et gouvernance	Taux de participation électorale	Pourcentage de votants aux dernières élections nationales au sein de la population inscrite sur les listes électorales	Pos	(niveaux moyens)
+EQ_SATW	average	Qualité de l’environnement	Qualité de l’eau	Satisfaction à l’égard de la qualité de l’eau locale	Pos	(niveaux moyens)
+EQ_AIRP	average	Qualité de l’environnement	Pollution de l'air	Concentration annuelle de PM2.5 pondérée par la population	Neg	(niveaux moyens)
+PS_HOMI	average	Sécurité personnelle	Taux d’homicides	Taux normalisé selon l’âge, pour 100 000 habitants	Neg	
+PS_SFRV	average	Sécurité personnelle	Sentiment de sécurité des personnes lorsqu’elles marchent seules la nuit	Sentiment de sécurité des personnes lorsqu’elles marchent seules la nuit dans la ville ou le quartier où elles vivent	Pos	(niveaux moyens)
+SW_LIFS	average	Satisfaction à l’égard de l’existence	Satisfaction à l’égard de l’existence	Valeurs moyennes sur une échelle graduée de 0 à 10	Pos	(niveaux moyens)
