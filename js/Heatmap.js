@@ -110,7 +110,7 @@ function heatMap(listIneq,listVariable,IsoIneq){
 					test=test.replace(/’/gi,"");
 					test=test.replace(/à/gi,"");
 					var key=test.replace(/ /g,"");
-					console.log(key)
+					
 					var url="icons/"+key+".png";
 		    		return url;	
 		    })
