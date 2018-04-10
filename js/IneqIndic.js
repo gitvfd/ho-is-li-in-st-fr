@@ -140,6 +140,7 @@ function ineqindic (selectedIndic,ISO,allIsoIndicIneq){
 			listIneqIndiCou.push(toPush)
 	})
 
+
 	//Define Scales
 	var interval= (width-4*marginLeft)/8;
 	var markOne,markTwo;
